@@ -1,0 +1,16 @@
+{
+  "PropertyTable": {
+    "Properties": [
+      {
+        "CID": 14052,
+        "MolecularWeight": "204.31",
+        "ConnectivitySMILES": "CCC(CO)NCCNC(CC)CO",
+        "XLogP": -0.1,
+        "TPSA": 64.5,
+        "HBondDonorCount": 4,
+        "HBondAcceptorCount": 4,
+        "RotatableBondCount": 9
+      }
+    ]
+  }
+}

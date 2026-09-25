@@ -1,0 +1,7 @@
+# Verified working set, 25 September 2026, Python 3.11.5 on macOS.
+# Only packages the dashboard actually imports are listed. Biopython is not required: the NCBI calls
+# are plain HTTP against E-utilities and PUG-REST, which keeps the dependency surface small.
+streamlit>=1.57.0
+pandas>=2.0.0
+numpy>=1.26.0
+requests>=2.31.0

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Microsoft Word lock files
+~$*.docx
+~$*.doc
+
+# Streamlit local secrets, never commit credentials
+.streamlit/secrets.toml
+
+# Claude Code local settings, machine-specific
+.claude/settings.local.json
+.claude/.cc-writes/
+
+# Tool-generated knowledge graph, regenerable from the manuscript with /graphify
+graphify-out/
+
+# NOTE: data/ncbi_cache/ is deliberately NOT ignored. The committed NCBI payloads are what let the
+# dashboard open and compute with no network access, which the README documents.

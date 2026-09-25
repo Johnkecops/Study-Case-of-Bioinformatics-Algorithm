@@ -1,0 +1,1260 @@
+{
+ "pool": {
+  "B1_CRISPR": [
+   "26780180",
+   "35839778",
+   "27661255",
+   "40262634",
+   "40866699",
+   "32541958",
+   "30710114",
+   "33096023",
+   "40239646",
+   "41926577",
+   "28757882",
+   "38152286",
+   "38443662",
+   "40829801",
+   "36306733",
+   "38684833",
+   "40739008",
+   "37084259",
+   "29644494",
+   "39119666",
+   "42353201",
+   "35341983",
+   "32286628",
+   "33478580",
+   "32006410",
+   "36271848",
+   "32455882",
+   "30804513",
+   "37889037",
+   "35649413",
+   "39677777",
+   "40174587",
+   "40709098",
+   "27276584",
+   "35236300",
+   "40782836",
+   "41203686",
+   "37847697",
+   "33616444",
+   "38340729",
+   "33417623",
+   "37980345",
+   "38091991",
+   "37469443",
+   "39696352",
+   "38641083",
+   "32353475",
+   "31971562",
+   "31890142",
+   "40261207",
+   "40699706",
+   "36765063",
+   "38136570",
+   "37526217",
+   "36710911",
+   "33346713",
+   "40468633",
+   "38199209",
+   "41253931",
+   "39135699"
+  ],
+  "B2_DRUG": [
+   "33844136",
+   "37697042",
+   "34560276",
+   "40816267",
+   "37031957",
+   "36347444",
+   "33779453",
+   "38663579",
+   "36768346",
+   "37779408",
+   "38066301",
+   "40451590",
+   "41850287",
+   "41011141",
+   "35708267",
+   "29668343",
+   "35847004",
+   "39737570",
+   "39922803",
+   "34731467",
+   "37007046",
+   "39316581",
+   "41039172",
+   "37014633",
+   "34222205",
+   "33198233",
+   "30028206",
+   "34731473",
+   "37728008",
+   "31174387",
+   "33386098",
+   "32345062",
+   "36623998",
+   "36150044",
+   "34323201",
+   "37794737",
+   "36736583",
+   "34082136",
+   "30338743",
+   "34885952",
+   "35440144",
+   "38173000",
+   "38473785",
+   "35889440",
+   "29887378",
+   "32725781",
+   "42446430",
+   "33176630",
+   "32614747",
+   "30888845",
+   "38385768",
+   "31995074",
+   "41260783",
+   "30288997",
+   "38499731",
+   "36152211",
+   "37529294",
+   "33759121",
+   "34399578",
+   "35301149"
+  ],
+  "B3_PHAGE": [
+   "42561074",
+   "39018352",
+   "40840758",
+   "41219972",
+   "27885969",
+   "41238301",
+   "38999924",
+   "39110597",
+   "37374901",
+   "41820158",
+   "39002700",
+   "41057624",
+   "40838049",
+   "36374423",
+   "39344712",
+   "36546891",
+   "25666799",
+   "36845830",
+   "34174831",
+   "37896809",
+   "30322741",
+   "35649413",
+   "33316575",
+   "37185764",
+   "38499981",
+   "41428827",
+   "37084259",
+   "34900137",
+   "39418300",
+   "40359589",
+   "36353213",
+   "35950840",
+   "35880867",
+   "34170506",
+   "41777249",
+   "40475446",
+   "31862543",
+   "41656299",
+   "39663481",
+   "41406010",
+   "36903484",
+   "40498839",
+   "34952265",
+   "36659812",
+   "36409909",
+   "37503040",
+   "36734893",
+   "41174147",
+   "38383452",
+   "35920769",
+   "36464489",
+   "32162265",
+   "39504601",
+   "39951981",
+   "32858938",
+   "41853549",
+   "33045744",
+   "30659855",
+   "40666868",
+   "32813660"
+  ]
+ },
+ "recs": {
+  "26780180": {
+   "year": "2016",
+   "journal": "Nat Biotechnol",
+   "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "35839778": {
+   "year": "2022",
+   "journal": "Cancer Cell",
+   "title": "Pan-cancer proteomic map of 949 human cell lines",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "27661255": {
+   "year": "2016",
+   "journal": "Elife",
+   "title": "Compact and highly active next-generation libraries for CRISPR-mediated gene repression and activation",
+   "type": "Journal Article"
+  },
+  "40262634": {
+   "year": "2025",
+   "journal": "Nature",
+   "title": "Custom CRISPR-Cas9 PAM variants via scalable engineering and machine learning",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "40866699": {
+   "year": "2025",
+   "journal": "Nature",
+   "title": "One-shot design of functional protein binders with BindCraft",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "32541958": {
+   "year": "2020",
+   "journal": "Nat Biotechnol",
+   "title": "CHANGE-seq reveals genetic and epigenetic effects on CRISPR-Cas9 genome-wide activity",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "30710114": {
+   "year": "2019",
+   "journal": "Nat Protoc",
+   "title": "Integrative analysis of pooled CRISPR genetic screens using MAGeCKFlute",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "33096023": {
+   "year": "2020",
+   "journal": "Cancer Cell",
+   "title": "Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "40239646": {
+   "year": "2025",
+   "journal": "Cell",
+   "title": "High-resolution dynamic imaging of chromatin DNA communication using Oligo-LiveFISH",
+   "type": "Journal Article"
+  },
+  "41926577": {
+   "year": "2026",
+   "journal": "Science",
+   "title": "DefensePredictor: A machine learning model to discover prokaryotic immune systems",
+   "type": "Journal Article"
+  },
+  "28757882": {
+   "year": "2016",
+   "journal": "Per Med",
+   "title": "Desktop Genetics",
+   "type": "Editorial"
+  },
+  "38152286": {
+   "year": "2023",
+   "journal": "Front Bioeng Biotechnol",
+   "title": "Editorial: CRISPR-aided bioengineering for value-added product development",
+   "type": "Editorial"
+  },
+  "38443662": {
+   "year": "2024",
+   "journal": "Nat Cancer",
+   "title": "A deep learning model of tumor cell architecture elucidates response and resistance to CDK4/6 inhibitors",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "40829801": {
+   "year": "2025",
+   "journal": "Nucleic Acids Res",
+   "title": "Kingdom-wide CRISPR guide design with ALLEGRO",
+   "type": "Journal Article"
+  },
+  "36306733": {
+   "year": "2022",
+   "journal": "Cell",
+   "title": "Structural basis for Cas9 off-target activity",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "38684833": {
+   "year": "2024",
+   "journal": "Nature",
+   "title": "'ChatGPT for CRISPR' creates new gene-editing tools",
+   "type": "News"
+  },
+  "40739008": {
+   "year": "2025",
+   "journal": "Nature",
+   "title": "AI expands the repertoire of CRISPR-associated proteins for genome editing",
+   "type": "News"
+  },
+  "37084259": {
+   "year": "2023",
+   "journal": "Bioinformatics",
+   "title": "AcrNET: predicting anti-CRISPR with deep learning",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "29644494": {
+   "year": "2018",
+   "journal": "Interdiscip Sci",
+   "title": "Review of CRISPR/Cas9 sgRNA Design Tools",
+   "type": "Journal Article;Review"
+  },
+  "39119666": {
+   "year": "2024",
+   "journal": "ACS Synth Biol",
+   "title": "Systems-Level Modeling for CRISPR-Based Metabolic Engineering",
+   "type": "Journal Article;Review;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "42353201": {
+   "year": "2026",
+   "journal": "Int J Mol Sci",
+   "title": "Machine Learning for CRISPR-Based Diagnostics",
+   "type": "Journal Article;Review"
+  },
+  "35341983": {
+   "year": "2023",
+   "journal": "Genomics Proteomics Bioinformatics",
+   "title": "Computational Tools and Resources for CRISPR/Cas Genome Editing",
+   "type": "Journal Article;Review;Research Support, U.S. Gov't, Non-P.H.S.;Research Support, Non-U.S. Gov't"
+  },
+  "32286628": {
+   "year": "2020",
+   "journal": "Nucleic Acids Res",
+   "title": "Machine learning predicts new anti-CRISPR proteins",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "33478580": {
+   "year": "2021",
+   "journal": "Genome Biol",
+   "title": "Minimal genome-wide human CRISPR-Cas9 library",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "32006410": {
+   "year": "2020",
+   "journal": "Methods Mol Biol",
+   "title": "CRISPR/Cas9 Guide RNA Design Rules for Predicting Activity",
+   "type": "Journal Article;Review"
+  },
+  "36271848": {
+   "year": "2022",
+   "journal": "Bioinformatics",
+   "title": "CRISPRon/off: CRISPR/Cas9 on- and off-target gRNA design",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "32455882": {
+   "year": "2020",
+   "journal": "Cells",
+   "title": "Computational Tools and Resources Supporting CRISPR-Cas Experiments",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "30804513": {
+   "year": "2019",
+   "journal": "Nat Struct Mol Biol",
+   "title": "DNA stretching induces Cas9 off-target activity",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "37889037": {
+   "year": "2024",
+   "journal": "Nucleic Acids Res",
+   "title": "SLKB: synthetic lethality knowledge base",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "35649413": {
+   "year": "2022",
+   "journal": "Mol Cell",
+   "title": "Anti-CRISPR prediction using deep learning reveals an inhibitor of Cas13b nucleases",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "39677777": {
+   "year": "2025",
+   "journal": "bioRxiv",
+   "title": "BindCraft: one-shot design of functional protein binders",
+   "type": "Journal Article;Preprint"
+  },
+  "40174587": {
+   "year": "2025",
+   "journal": "Cell Genom",
+   "title": "Interpreting regulatory mechanisms of Hippo signaling through a deep learning sequence model",
+   "type": "Journal Article"
+  },
+  "40709098": {
+   "year": "2025",
+   "journal": "Nat Mach Intell",
+   "title": "Integrating multimodal cancer data using deep latent variable path modelling",
+   "type": "Journal Article"
+  },
+  "27276584": {
+   "year": "2016",
+   "journal": "FEBS J",
+   "title": "CRISPR guide RNA design for research applications",
+   "type": "Journal Article;Review;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "35236300": {
+   "year": "2022",
+   "journal": "BMC Genomics",
+   "title": "CASowary: CRISPR-Cas13 guide RNA predictor for transcript depletion",
+   "type": "Journal Article"
+  },
+  "40782836": {
+   "year": "2025",
+   "journal": "Ann Pharm Fr",
+   "title": "Computational genome engineering through AI-CRISPR-precision medicine integration in modern therapeutics",
+   "type": "Journal Article;Review"
+  },
+  "41203686": {
+   "year": "2025",
+   "journal": "Nat Commun",
+   "title": "Deep learning models simultaneously trained on multiple datasets improve base-editing activity prediction",
+   "type": "Journal Article"
+  },
+  "37847697": {
+   "year": "2023",
+   "journal": "PLoS One",
+   "title": "Predicting CRISPR-Cas12a guide efficiency for targeting using machine learning",
+   "type": "Meta-Analysis;Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "33616444": {
+   "year": "2021",
+   "journal": "CRISPR J",
+   "title": "Can Deep Learning Solve the Cas9 Dilemma?",
+   "type": "Journal Article"
+  },
+  "38340729": {
+   "year": "2024",
+   "journal": "Cell Syst",
+   "title": "Accurate top protein variant discovery via low-N pick-and-validate machine learning",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "33417623": {
+   "year": "2021",
+   "journal": "PLoS Comput Biol",
+   "title": "Machine learning based CRISPR gRNA design for therapeutic exon skipping",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "37980345": {
+   "year": "2023",
+   "journal": "Nat Commun",
+   "title": "Genome-wide CRISPR off-target prediction and optimization using RNA-DNA interaction fingerprints",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "38091991": {
+   "year": "2023",
+   "journal": "Cell Syst",
+   "title": "Deep learning and CRISPR-Cas13d ortholog discovery for optimized RNA targeting",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "37469443": {
+   "year": "2023",
+   "journal": "Front Bioeng Biotechnol",
+   "title": "Deep learning in CRISPR-Cas systems: a review of recent studies",
+   "type": "Journal Article;Review"
+  },
+  "39696352": {
+   "year": "2024",
+   "journal": "Cell Commun Signal",
+   "title": "New insights into the role of mitophagy related gene affecting the metastasis of osteosarcoma through scRNA-seq and CRISPR-Cas9 genome editing",
+   "type": "Journal Article"
+  },
+  "38641083": {
+   "year": "2024",
+   "journal": "Methods",
+   "title": "DNA shape features improve prediction of CRISPR/Cas9 activity",
+   "type": "Journal Article"
+  },
+  "32353475": {
+   "year": "2020",
+   "journal": "Genomics",
+   "title": "Evaluation of off-targets predicted by sgRNA design tools",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "31971562": {
+   "year": "2020",
+   "journal": "Bioinformatics",
+   "title": "Generalizable sgRNA design for improved CRISPR/Cas9 editing efficiency",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "31890142": {
+   "year": "2020",
+   "journal": "Comput Struct Biotechnol J",
+   "title": "Computational approaches for effective CRISPR guide RNA design and evaluation",
+   "type": "Journal Article;Review"
+  },
+  "40261207": {
+   "year": "2025",
+   "journal": "ACS Synth Biol",
+   "title": "Deep Learning-Based Classification of CRISPR Loci Using Repeat Sequences",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "40699706": {
+   "year": "2025",
+   "journal": "Curr Issues Mol Biol",
+   "title": "CRISPR-Cas9 and Its Bioinformatics Tools: A Systematic Review",
+   "type": "Journal Article;Review"
+  },
+  "36765063": {
+   "year": "2023",
+   "journal": "Nat Commun",
+   "title": "Modeling CRISPR-Cas13d on-target and off-target effects using machine learning approaches",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, N.I.H., Extramural"
+  },
+  "38136570": {
+   "year": "2023",
+   "journal": "Biomolecules",
+   "title": "gRNA Design: How Its Evolution Impacted on CRISPR/Cas9 Systems Refinement",
+   "type": "Journal Article;Review"
+  },
+  "37526217": {
+   "year": "2024",
+   "journal": "J Biomol Struct Dyn",
+   "title": "Engineering salt-tolerant Cas12f1 variants for gene-editing applications",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "36710911": {
+   "year": "2022",
+   "journal": "Front Bioinform",
+   "title": "CRISPR genome editing using computational approaches: A survey",
+   "type": "Journal Article;Review"
+  },
+  "33346713": {
+   "year": "2020",
+   "journal": "CRISPR J",
+   "title": "CRISPR-Cas \"Non-Target\" Sites Inhibit On-Target Cutting Rates",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "40468633": {
+   "year": "2025",
+   "journal": "Small Methods",
+   "title": "Deep Learning Based Models for CRISPR/Cas Off-Target Prediction",
+   "type": "Journal Article;Review"
+  },
+  "38199209": {
+   "year": "2024",
+   "journal": "Comput Biol Med",
+   "title": "Interpretable CRISPR/Cas9 off-target activities with mismatches and indels prediction using BERT",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "41253931": {
+   "year": "2025",
+   "journal": "Sci Rep",
+   "title": "Optimization of gene knockout approaches and sgRNA selection in hPSCs with inducible Cas9 expression",
+   "type": "Journal Article"
+  },
+  "39135699": {
+   "year": "2024",
+   "journal": "Imeta",
+   "title": "Deep learning enhancing guide RNA design for CRISPR/Cas12a-based diagnostics",
+   "type": "Journal Article"
+  },
+  "33844136": {
+   "year": "2021",
+   "journal": "Mol Divers",
+   "title": "Artificial intelligence to deep learning: machine intelligence approach for drug discovery",
+   "type": "Journal Article;Review"
+  },
+  "37697042": {
+   "year": "2023",
+   "journal": "Nat Rev Drug Discov",
+   "title": "Artificial intelligence for natural product drug discovery",
+   "type": "Journal Article;Review;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, Non-P.H.S.;Research Support, Non-U.S. Gov't"
+  },
+  "34560276": {
+   "year": "2022",
+   "journal": "Drug Discov Today",
+   "title": "Machine-learning methods for ligand-protein molecular docking",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "40816267": {
+   "year": "2025",
+   "journal": "Cell",
+   "title": "A generative deep learning approach to de novo antibiotic design",
+   "type": "Journal Article"
+  },
+  "37031957": {
+   "year": "2023",
+   "journal": "Brief Bioinform",
+   "title": "Machine learning for synergistic network pharmacology: a comprehensive overview",
+   "type": "Review;Journal Article"
+  },
+  "36347444": {
+   "year": "2023",
+   "journal": "Eur J Pharm Sci",
+   "title": "CADD, AI and ML in drug discovery: A comprehensive review",
+   "type": "Journal Article;Review"
+  },
+  "33779453": {
+   "year": "2021",
+   "journal": "Expert Opin Drug Discov",
+   "title": "Artificial intelligence in drug discovery: recent advances and future perspectives",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "38663579": {
+   "year": "2024",
+   "journal": "Drug Discov Today",
+   "title": "Unleashing the power of generative AI in drug discovery",
+   "type": "Journal Article;Review"
+  },
+  "36768346": {
+   "year": "2023",
+   "journal": "Int J Mol Sci",
+   "title": "Artificial Intelligence and Machine Learning Technology Driven Modern Drug Discovery and Development",
+   "type": "Journal Article;Review"
+  },
+  "37779408": {
+   "year": "2023",
+   "journal": "Curr Drug Metab",
+   "title": "Artificial Intelligence in Drug Formulation and Development: Applications and Future Prospects",
+   "type": "Review;Journal Article"
+  },
+  "38066301": {
+   "year": "2024",
+   "journal": "Nat Rev Drug Discov",
+   "title": "Integrating QSAR modelling and deep learning in drug discovery: the emergence of deep QSAR",
+   "type": "Journal Article;Review;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, Non-P.H.S."
+  },
+  "40451590": {
+   "year": "2025",
+   "journal": "Int J Pharm",
+   "title": "Artificial intelligence revolution in drug discovery: A paradigm shift in pharmaceutical innovation",
+   "type": "Journal Article;Review"
+  },
+  "41850287": {
+   "year": "2026",
+   "journal": "Cell",
+   "title": "Deep-learning-based de novo discovery and design of therapeutics that reverse disease-associated transcriptional phenotypes",
+   "type": "Journal Article"
+  },
+  "41011141": {
+   "year": "2025",
+   "journal": "Pharmaceuticals (Basel)",
+   "title": "Artificial Intelligence in Small-Molecule Drug Discovery: A Critical Review of Methods, Applications, and Real-World Outcomes",
+   "type": "Journal Article;Review"
+  },
+  "35708267": {
+   "year": "2022",
+   "journal": "Expert Opin Drug Discov",
+   "title": "Can artificial intelligence accelerate preclinical drug discovery and precision medicine?",
+   "type": "Editorial;Research Support, Non-U.S. Gov't"
+  },
+  "29668343": {
+   "year": "2018",
+   "journal": "Expert Opin Drug Discov",
+   "title": "Advancing drug discovery via GPU-based deep learning",
+   "type": "Editorial;Research Support, Non-U.S. Gov't"
+  },
+  "35847004": {
+   "year": "2022",
+   "journal": "Front Pharmacol",
+   "title": "Editorial: Chemoinformatics Approaches to Structure- and Ligand-Based Drug Design, Volume II",
+   "type": "Editorial"
+  },
+  "39737570": {
+   "year": "2024",
+   "journal": "Brief Bioinform",
+   "title": "Machine learning-enabled virtual screening indicates the anti-tuberculosis activity of aldoxorubicin and quarfloxin with verification by molecular docking, molecular dynamics simulations, and biological evaluations",
+   "type": "Journal Article"
+  },
+  "39922803": {
+   "year": "2025",
+   "journal": "Future Med Chem",
+   "title": "How does machine learning augment alchemical binding free energy calculations?",
+   "type": "Editorial"
+  },
+  "34731467": {
+   "year": "2022",
+   "journal": "Methods Mol Biol",
+   "title": "Deep Learning and Computational Chemistry",
+   "type": "Journal Article"
+  },
+  "37007046": {
+   "year": "2023",
+   "journal": "Front Pharmacol",
+   "title": "Editorial: Computational chemogenomics: In silico tools in pharmacological research and drug discovery",
+   "type": "Editorial"
+  },
+  "39316581": {
+   "year": "2024",
+   "journal": "Pharm Pat Anal",
+   "title": "Catalyzing innovation in cancer drug discovery through artificial intelligence, machine learning\u00a0and patency",
+   "type": "Editorial"
+  },
+  "41039172": {
+   "year": "2025",
+   "journal": "EMBO Mol Med",
+   "title": "AI-identified CD133-targeting natural compounds demonstrate differential anti-tumor effects and mechanisms in pan-cancer models",
+   "type": "Journal Article"
+  },
+  "37014633": {
+   "year": "2023",
+   "journal": "Chembiochem",
+   "title": "Structure-Based Drug Discovery with Deep Learning",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't"
+  },
+  "34222205": {
+   "year": "2021",
+   "journal": "Front Chem",
+   "title": "Editorial: Cheminformatics Approaches in Drug Discovery for Neglected Tropical Diseases",
+   "type": "Editorial"
+  },
+  "33198233": {
+   "year": "2020",
+   "journal": "Molecules",
+   "title": "Machine Learning Methods in Drug Discovery",
+   "type": "Journal Article;Review"
+  },
+  "30028206": {
+   "year": "2018",
+   "journal": "Future Med Chem",
+   "title": "Foreword: computational special focus issue",
+   "type": "Introductory Journal Article"
+  },
+  "34731473": {
+   "year": "2022",
+   "journal": "Methods Mol Biol",
+   "title": "Deep Learning in Structure-Based Drug Design",
+   "type": "Journal Article"
+  },
+  "37728008": {
+   "year": "2023",
+   "journal": "Future Med Chem",
+   "title": "Current in silico methods for multi-target drug discovery in early anticancer research: the rise of the perturbation-theory machine learning approach",
+   "type": "Editorial;Research Support, Non-U.S. Gov't"
+  },
+  "31174387": {
+   "year": "2019",
+   "journal": "Int J Mol Sci",
+   "title": "A Structure-Based Drug Discovery Paradigm",
+   "type": "Journal Article;Review"
+  },
+  "33386098": {
+   "year": "2019",
+   "journal": "Drug Discov Today Technol",
+   "title": "Selecting machine-learning scoring functions for structure-based virtual screening",
+   "type": "Journal Article;Review"
+  },
+  "32345062": {
+   "year": "2020",
+   "journal": "Expert Opin Drug Discov",
+   "title": "Is high performance computing a requirement for novel drug discovery and how will this impact academic efforts?",
+   "type": "Editorial;Research Support, Non-U.S. Gov't"
+  },
+  "36623998": {
+   "year": "2023",
+   "journal": "Trends Cell Biol",
+   "title": "Deep learning in image-based phenotypic drug discovery",
+   "type": "Journal Article;Review"
+  },
+  "36150044": {
+   "year": "2022",
+   "journal": "Expert Opin Drug Discov",
+   "title": "How do we further enhance 2D fingerprint similarity searching for novel drug discovery?",
+   "type": "Editorial;Research Support, Non-U.S. Gov't"
+  },
+  "34323201": {
+   "year": "2022",
+   "journal": "Recent Pat Anticancer Drug Discov",
+   "title": "Artificial Intelligence and Cancer Drug Development",
+   "type": "Journal Article;Review"
+  },
+  "37794737": {
+   "year": "2023",
+   "journal": "Expert Opin Drug Discov",
+   "title": "Deep learning tools to accelerate antibiotic discovery",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S.;Research Support, N.I.H., Extramural"
+  },
+  "36736583": {
+   "year": "2023",
+   "journal": "Drug Discov Today",
+   "title": "New avenues in artificial-intelligence-assisted drug discovery",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't"
+  },
+  "34082136": {
+   "year": "2021",
+   "journal": "Drug Discov Today",
+   "title": "De novo molecular design and generative models",
+   "type": "Journal Article;Review"
+  },
+  "30338743": {
+   "year": "2019",
+   "journal": "Curr Comput Aided Drug Des",
+   "title": "Virtual Screening Meets Deep Learning",
+   "type": "Journal Article;Review"
+  },
+  "34885952": {
+   "year": "2021",
+   "journal": "Molecules",
+   "title": "Virtual Screening with Gnina 1.0",
+   "type": "Journal Article"
+  },
+  "35440144": {
+   "year": "2022",
+   "journal": "Annu Rev Biomed Data Sci",
+   "title": "Machine Learning in Chemoinformatics and Medicinal Chemistry",
+   "type": "Journal Article;Review"
+  },
+  "38173000": {
+   "year": "2024",
+   "journal": "J Cheminform",
+   "title": "Structure-based, deep-learning models for protein-ligand binding affinity prediction",
+   "type": "Journal Article;Review"
+  },
+  "38473785": {
+   "year": "2024",
+   "journal": "Int J Mol Sci",
+   "title": "Kinome-Wide Virtual Screening by Multi-Task Deep Learning",
+   "type": "Journal Article"
+  },
+  "35889440": {
+   "year": "2022",
+   "journal": "Molecules",
+   "title": "Protein-Ligand Docking in the Machine-Learning Era",
+   "type": "Journal Article;Review"
+  },
+  "29887378": {
+   "year": "2018",
+   "journal": "Cell",
+   "title": "Next-Generation Machine Learning for Biological Networks",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "32725781": {
+   "year": "2020",
+   "journal": "Mol Inform",
+   "title": "Cheminformatics in Natural Product-based Drug Discovery",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "42446430": {
+   "year": "2026",
+   "journal": "J Chem Inf Model",
+   "title": "Machine Learning for RNA-Targeting Drug Design",
+   "type": "Journal Article;Review"
+  },
+  "33176630": {
+   "year": "2021",
+   "journal": "Curr Med Chem",
+   "title": "New Perspectives on Machine Learning in Drug Discovery",
+   "type": "Journal Article;Review"
+  },
+  "32614747": {
+   "year": "2020",
+   "journal": "Curr Top Med Chem",
+   "title": "Experimental and Computational Approaches to Improve Binding Affinity in Chemical Biology and Drug Discovery",
+   "type": "Editorial;Introductory Journal Article"
+  },
+  "30888845": {
+   "year": "2019",
+   "journal": "Future Med Chem",
+   "title": "From chemoinformatics to deep learning: an open road to drug discovery",
+   "type": "Journal Article;Review"
+  },
+  "38385768": {
+   "year": "2024",
+   "journal": "J Chem Inf Model",
+   "title": "Machine Learning for Sequence and Structure-Based Protein-Ligand Interaction Prediction",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't"
+  },
+  "31995074": {
+   "year": "2020",
+   "journal": "Phys Chem Chem Phys",
+   "title": "Combined strategies in structure-based virtual screening",
+   "type": "Journal Article;Review"
+  },
+  "41260783": {
+   "year": "2025",
+   "journal": "Chin J Nat Med",
+   "title": "Artificial intelligence in natural products research",
+   "type": "Journal Article;Review"
+  },
+  "30288997": {
+   "year": "2018",
+   "journal": "Future Med Chem",
+   "title": "Deep learning and virtual drug screening",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "38499731": {
+   "year": "2024",
+   "journal": "Sci Rep",
+   "title": "De novo antioxidant peptide design via machine learning and DFT studies",
+   "type": "Journal Article"
+  },
+  "36152211": {
+   "year": "2023",
+   "journal": "Methods Mol Biol",
+   "title": "Machine Learning and Computational Chemistry for the Endocannabinoid System",
+   "type": "Journal Article;Review"
+  },
+  "37529294": {
+   "year": "2022",
+   "journal": "QRB Discov",
+   "title": "Applications of machine learning in computer-aided drug discovery",
+   "type": "Journal Article;Review"
+  },
+  "33759121": {
+   "year": "2021",
+   "journal": "Methods Mol Biol",
+   "title": "Binding Mode Prediction and Virtual Screening Applications by Covalent Docking",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "34399578": {
+   "year": "2021",
+   "journal": "J Chem Inf Model",
+   "title": "Machine Learning-Enabled Pipeline for Large-Scale Virtual Drug Screening",
+   "type": "Journal Article;Research Support, N.I.H., Extramural"
+  },
+  "35301149": {
+   "year": "2022",
+   "journal": "Drug Discov Today",
+   "title": "Oncological drug discovery: AI meets structure-based computational research",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't"
+  },
+  "42561074": {
+   "year": "2026",
+   "journal": "Science",
+   "title": "Generative design of bacteriophages with genome language models",
+   "type": "Journal Article"
+  },
+  "39018352": {
+   "year": "2024",
+   "journal": "Annu Rev Anal Chem (Palo Alto Calif)",
+   "title": "Bacteriophage-Based Bioanalysis",
+   "type": "Journal Article;Review"
+  },
+  "40840758": {
+   "year": "2025",
+   "journal": "Biotechnol Adv",
+   "title": "Phage therapy against Klebsiella pneumoniae: An evolving perspective",
+   "type": "Journal Article;Review"
+  },
+  "41219972": {
+   "year": "2025",
+   "journal": "J Biomed Sci",
+   "title": "Technological advancements in antibody-based therapeutics for treatment of diseases",
+   "type": "Journal Article;Review"
+  },
+  "27885969": {
+   "year": "2016",
+   "journal": "Crit Care",
+   "title": "36th International Symposium on Intensive Care and Emergency Medicine : Brussels, Belgium. 15-18 March 2016",
+   "type": "Conference Proceedings"
+  },
+  "41238301": {
+   "year": "2025",
+   "journal": "Enzymes",
+   "title": "Bacteriophage endolysins",
+   "type": "Journal Article;Review"
+  },
+  "38999924": {
+   "year": "2024",
+   "journal": "Int J Mol Sci",
+   "title": "Unveiling the Secrets of Acinetobacter baumannii: Resistance, Current Treatments, and Future Innovations",
+   "type": "Journal Article;Review"
+  },
+  "39110597": {
+   "year": "2024",
+   "journal": "Cell Rep",
+   "title": "DeepMineLys: Deep mining of phage lysins from human microbiome",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "37374901": {
+   "year": "2023",
+   "journal": "Microorganisms",
+   "title": "PHERI-Phage Host ExploRation Pipeline",
+   "type": "Journal Article"
+  },
+  "41820158": {
+   "year": "2026",
+   "journal": "Trends Cell Biol",
+   "title": "Decoding and deciphering a subcellular ZIP code system",
+   "type": "Journal Article"
+  },
+  "39002700": {
+   "year": "2024",
+   "journal": "Int J Antimicrob Agents",
+   "title": "Clinical and laboratory insights into the threat of hypervirulent Klebsiella pneumoniae",
+   "type": "Journal Article;Review"
+  },
+  "41057624": {
+   "year": "2025",
+   "journal": "NPJ Digit Med",
+   "title": "Metagenomic fingerprints in bronchoalveolar lavage differentiate pulmonary diseases",
+   "type": "Journal Article"
+  },
+  "40838049": {
+   "year": "2023",
+   "journal": "Front Drug Deliv",
+   "title": "Design of respirable sprayed microparticles of encapsulated bacteriophages",
+   "type": "Journal Article;Review"
+  },
+  "36374423": {
+   "year": "2023",
+   "journal": "Methods Mol Biol",
+   "title": "How to Design Peptides",
+   "type": "Journal Article"
+  },
+  "39344712": {
+   "year": "2024",
+   "journal": "Brief Bioinform",
+   "title": "DeepPBI-KG: a deep learning method for the prediction of phage-bacteria interactions based on key genes",
+   "type": "Journal Article"
+  },
+  "36546891": {
+   "year": "2022",
+   "journal": "Curr Protoc",
+   "title": "Recombineering in Non-Model Bacteria",
+   "type": "Journal Article"
+  },
+  "25666799": {
+   "year": "2015",
+   "journal": "Curr Med Chem",
+   "title": "Bacteriophages and phage-derived proteins--application approaches",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "36845830": {
+   "year": "2023",
+   "journal": "Front Antibiot",
+   "title": "Resistance-resistant antibacterial treatment strategies",
+   "type": "Journal Article"
+  },
+  "34174831": {
+   "year": "2021",
+   "journal": "BMC Microbiol",
+   "title": "Application of machine learning in bacteriophage research",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "37896809": {
+   "year": "2023",
+   "journal": "Viruses",
+   "title": "The International Virus Bioinformatics Meeting 2023",
+   "type": "Conference Proceedings;Research Support, Non-U.S. Gov't"
+  },
+  "30322741": {
+   "year": "2019",
+   "journal": "Trends Microbiol",
+   "title": "Engineering Bacteriophages as Versatile Biologics",
+   "type": "Journal Article;Review"
+  },
+  "33316575": {
+   "year": "2021",
+   "journal": "Curr Opin Biotechnol",
+   "title": "Phages in vaccine design and immunity; mechanisms and mysteries",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Review"
+  },
+  "37185764": {
+   "year": "2023",
+   "journal": "Curr Issues Mol Biol",
+   "title": "Using AlphaFold Predictions in Viral Research",
+   "type": "Journal Article;Review"
+  },
+  "38499981": {
+   "year": "2024",
+   "journal": "J Chem Theory Comput",
+   "title": "High-Throughput Computational Screening of Solid-Binding Peptides",
+   "type": "Journal Article"
+  },
+  "41428827": {
+   "year": "2026",
+   "journal": "ACS Synth Biol",
+   "title": "Machine Learning in Microbiome Research and Engineering",
+   "type": "Journal Article;Review"
+  },
+  "34900137": {
+   "year": "2021",
+   "journal": "Comput Struct Biotechnol J",
+   "title": "Mathematical-based microbiome analytics for clinical translation",
+   "type": "Journal Article;Review"
+  },
+  "39418300": {
+   "year": "2024",
+   "journal": "PLoS Comput Biol",
+   "title": "DeepPL: A deep-learning-based tool for the prediction of bacteriophage lifecycle",
+   "type": "Journal Article;Research Support, U.S. Gov't, P.H.S."
+  },
+  "40359589": {
+   "year": "2025",
+   "journal": "Virology",
+   "title": "Exploring deep learning in phage discovery and characterization",
+   "type": "Journal Article;Review;Research Support, Non-U.S. Gov't"
+  },
+  "36353213": {
+   "year": "2022",
+   "journal": "Front Bioinform",
+   "title": "Bacteriophage Genetic Edition Using LSTM",
+   "type": "Journal Article"
+  },
+  "35950840": {
+   "year": "2022",
+   "journal": "Gigascience",
+   "title": "DeePVP: Identification and classification of phage virion proteins using deep learning",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "35880867": {
+   "year": "2022",
+   "journal": "Microbiol Spectr",
+   "title": "CRISPR-Cas9 Based Bacteriophage Genome Editing",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "34170506": {
+   "year": "2021",
+   "journal": "Infect Dis Ther",
+   "title": "Bacteriophage Proteome: Insights and Potentials of an Alternate to Antibiotics",
+   "type": "Journal Article;Review"
+  },
+  "41777249": {
+   "year": "2026",
+   "journal": "MedComm (2020)",
+   "title": "Bacteriophage Therapy: Current Strategies and Future Perspectives",
+   "type": "Journal Article;Review"
+  },
+  "40475446": {
+   "year": "2025",
+   "journal": "bioRxiv",
+   "title": "Multiobjective learning and design of bacteriophage specificity",
+   "type": "Journal Article;Preprint"
+  },
+  "31862543": {
+   "year": "2020",
+   "journal": "Curr Opin Biotechnol",
+   "title": "Engineered bacteriophages as programmable biocontrol agents",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S.;Review"
+  },
+  "41656299": {
+   "year": "2026",
+   "journal": "Nat Commun",
+   "title": "Uncovering Cas9 PAM diversity through metagenomic mining and machine learning",
+   "type": "Journal Article"
+  },
+  "39663481": {
+   "year": "2024",
+   "journal": "Nat Biotechnol",
+   "title": "Leveraging machine learning and big data techniques to map the global patent landscape of phage therapy",
+   "type": "Journal Article"
+  },
+  "41406010": {
+   "year": "2025",
+   "journal": "Microb Genom",
+   "title": "Predicting clinical outcome of Escherichia coli O157:H7 infections using explainable machine learning",
+   "type": "Journal Article"
+  },
+  "36903484": {
+   "year": "2023",
+   "journal": "Molecules",
+   "title": "Prediction of Phage Virion Proteins Using Machine Learning Methods",
+   "type": "Journal Article"
+  },
+  "40498839": {
+   "year": "2025",
+   "journal": "Sci Adv",
+   "title": "Phage display enables machine learning discovery of cancer antigen-specific TCRs",
+   "type": "Journal Article"
+  },
+  "34952265": {
+   "year": "2022",
+   "journal": "Curr Opin Virol",
+   "title": "Digital phagograms: predicting phage infectivity through a multilayer machine learning approach",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "36659812": {
+   "year": "2023",
+   "journal": "Brief Bioinform",
+   "title": "PhaTYP: predicting the lifestyle for bacteriophages using BERT",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "36409909": {
+   "year": "2022",
+   "journal": "Proc Natl Acad Sci U S A",
+   "title": "Synthetic engineering and biological containment of bacteriophages",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "37503040": {
+   "year": "2023",
+   "journal": "bioRxiv",
+   "title": "Deciphering Phage-Host Specificity Based on the Association of Phage Depolymerases and Bacterial Surface Glycan with Deep Learning",
+   "type": "Preprint;Journal Article"
+  },
+  "36734893": {
+   "year": "2024",
+   "journal": "Curr Med Chem",
+   "title": "Recent Advances and Techniques for Identifying Novel Antibacterial Targets",
+   "type": "Journal Article;Review"
+  },
+  "41174147": {
+   "year": "2025",
+   "journal": "Sci Rep",
+   "title": "A machine learning approach to predict strain-specific phage-host interactions",
+   "type": "Journal Article"
+  },
+  "38383452": {
+   "year": "2024",
+   "journal": "Nat Commun",
+   "title": "Efficient encoding of large antigenic spaces by epitope prioritization with Dolphyn",
+   "type": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't"
+  },
+  "35920769": {
+   "year": "2022",
+   "journal": "Bioinformatics",
+   "title": "Identification of bacteriophage genome sequences with representation learning",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "36464489": {
+   "year": "2023",
+   "journal": "Brief Bioinform",
+   "title": "Virus classification for viral genomic fragments using PhaGCN2",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "32162265": {
+   "year": "2020",
+   "journal": "Methods Mol Biol",
+   "title": "Dynamics of Mycobacteriophage-Mycobacterial Host Interaction",
+   "type": "Journal Article"
+  },
+  "39504601": {
+   "year": "2024",
+   "journal": "Comput Biol Chem",
+   "title": "Design and characterization of defined alpha-helix mini-proteins\u00a0with intrinsic cell permeability",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  },
+  "39951981": {
+   "year": "2025",
+   "journal": "Comput Biol Med",
+   "title": "PhageDPO: A machine-learning based computational framework for identifying phage depolymerases",
+   "type": "Journal Article"
+  },
+  "32858938": {
+   "year": "2020",
+   "journal": "Viruses",
+   "title": "Reporter Phage-Based Detection of Bacterial Pathogens: Design Guidelines and Recent Developments",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't;Review"
+  },
+  "41853549": {
+   "year": "2024",
+   "journal": "Front Microbiomes",
+   "title": "Machine learning models can identify individuals based on a resident oral bacteriophage family",
+   "type": "Journal Article"
+  },
+  "33045744": {
+   "year": "2020",
+   "journal": "Nucleic Acids Res",
+   "title": "Seeker: alignment-free identification of bacteriophage genomes by deep learning",
+   "type": "Journal Article;Research Support, N.I.H., Intramural"
+  },
+  "30659855": {
+   "year": "2019",
+   "journal": "Adv Drug Deliv Rev",
+   "title": "Bacteriophage interactions with mammalian tissue: Therapeutic applications",
+   "type": "Journal Article;Review"
+  },
+  "40666868": {
+   "year": "2025",
+   "journal": "bioRxiv",
+   "title": "Deep Learning Transforms Phage-Host Interaction Discovery from Metagenomic Data",
+   "type": "Journal Article;Preprint"
+  },
+  "32813660": {
+   "year": "2021",
+   "journal": "IEEE/ACM Trans Comput Biol Bioinform",
+   "title": "A Deep Learning-Based Method for Identification of Bacteriophage-Host Interaction",
+   "type": "Journal Article;Research Support, Non-U.S. Gov't"
+  }
+ }
+}

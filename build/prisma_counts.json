@@ -1,0 +1,60 @@
+{
+ "B1_CRISPR": {
+  "query": "((CRISPR[tiab] OR Cas9[tiab] OR \"guide RNA\"[tiab] OR sgRNA[tiab]) AND (algorithm*[tiab] OR \"machine learning\"[tiab] OR \"deep learning\"[tiab] OR \"computational design\"[tiab] OR \"off-target prediction\"[tiab] OR \"score\"[tiab])) AND (\"2012/01/01\"[PDAT] : \"2026/09/04\"[PDAT])",
+  "count": 1521
+ },
+ "B2_DRUG": {
+  "query": "((\"drug discovery\"[tiab] OR \"de novo design\"[tiab] OR \"virtual screening\"[tiab] OR \"binding affinity\"[tiab]) AND (\"deep learning\"[tiab] OR \"machine learning\"[tiab] OR \"generative model*\"[tiab] OR \"neural network*\"[tiab] OR algorithm*[tiab])) AND (\"2012/01/01\"[PDAT] : \"2026/09/04\"[PDAT])",
+  "count": 10844
+ },
+ "B3_PHAGE": {
+  "query": "((bacteriophage*[tiab] OR phage*[tiab]) AND (design*[tiab] OR engineer*[tiab] OR \"machine learning\"[tiab] OR \"deep learning\"[tiab] OR \"generative model*\"[tiab] OR \"language model*\"[tiab] OR algorithm*[tiab])) AND (\"2012/01/01\"[PDAT] : \"2026/09/04\"[PDAT])",
+  "count": 6626
+ },
+ "TOTAL_PUBMED": 18991,
+ "UNION": 18868,
+ "DUPLICATES": 123,
+ "POOL_PER_BLOCK": 60,
+ "SCREEN_POOL": 178,
+ "POOL_DUP": 2,
+ "TA_SCREENED": 178,
+ "TA_EXCLUDED": 94,
+ "FT_ASSESSED": 84,
+ "FT_EXCLUDED": 63,
+ "TA_REASONS": {
+  "domain": 64,
+  "wetlab": 10,
+  "noalgo": 20
+ },
+ "FT_REASONS": {
+  "overlap": 48,
+  "noalgo-ft": 1,
+  "scope": 9,
+  "dup-chapter": 2,
+  "preprint-superseded": 3
+ },
+ "INCLUDED_FROM_SEARCH": 21,
+ "INCLUDED_IDS": [
+  "26780180",
+  "40262634",
+  "40739008",
+  "35341983",
+  "37980345",
+  "37469443",
+  "40468633",
+  "38199209",
+  "37697042",
+  "40816267",
+  "33779453",
+  "38663579",
+  "38066301",
+  "39737570",
+  "37794737",
+  "34082136",
+  "35889440",
+  "42561074",
+  "34174831",
+  "39418300",
+  "40359589"
+ ]
+}

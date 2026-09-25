@@ -1,7 +1,6 @@
 # Algorithmic Perspectives in Bioinformatics: an interactive companion
 
-A Streamlit dashboard that runs the equations and boxed algorithms from the conference proceeding
-`IKSAD-Bioalgo-Manuscript-Arli.docx` on small curated sets of real records fetched from NCBI.
+A Streamlit dashboard that runs the equations and boxed algorithms from the submitted conference proceeding on small curated sets of real records fetched from NCBI.
 
 Three panels, one per application area covered in the paper: CRISPR-Cas guide design, machine-learning
 drug screening, and generative bacteriophage design. Each panel states the governing equation, runs it
@@ -14,12 +13,12 @@ E-utilities or PubChem PUG-REST and cached locally.
 
 ## Why this exists
 
-The paper argues that three areas of biotechnology usually discussed separately share one
+The submitted paper argues that three areas of biotechnology usually discussed separately share one
 computational skeleton: a score over candidate objects, a search over a space too large to enumerate,
 and a constraint term that keeps proposals inside a region where laboratory work is plausible. That
 argument is easier to believe when you can move the constraint weight and watch the ranking change.
 
-Reading an equation in a PDF tells you what a method computes. Running it on a real
+Reading an equation in a submitted paper tells you what a method computes. Running it on a real
 *Mycobacterium tuberculosis* gene tells you what the method is like to use, including the parts that
 do not work. This dashboard exists for the second kind of understanding, and it was built for teaching
 and discussion rather than for production analysis.
@@ -56,7 +55,7 @@ Engineering Sciences**, https://ices.kongrepark.org/ .
 Suggested citation for the proceeding:
 
 > Parikesit, A. A. (2026). Algorithmic perspectives in bioinformatics: A review of computational
-> methods interpreting emerging trends in biotechnology. In *Proceedings of the III. International
+> methods interpreting emerging trends in biotechnology. _Status: Accepted_. In *Proceedings of the III. International
 > Conference on Engineering Sciences (ICES)*. https://ices.kongrepark.org/
 
 Author: Dr.rer.nat. Arli Aditya Parikesit, Department of Biotechnology, School of Health and Life
@@ -88,7 +87,7 @@ export NCBI_EMAIL="you@institution.edu"    # NCBI asks callers to identify thems
 streamlit run app.py
 ```
 
-The app opens at http://localhost:8501 .
+The app opens at http://localhost:8501 (the local computer).
 
 ### NCBI usage
 
@@ -252,7 +251,7 @@ analytical tool and its output must not be taken for granted.**
 
 Three of its components are declared stand-ins for methods it cannot run offline, as set out above.
 Guide rankings, compound rankings and genome scores produced here are teaching illustrations. They are
-not fit for experimental prioritisation without substituting the real models named in the upgrade
+not fit for experimental prioritisations without substituting the real models named in the upgrade
 table, and even then computational output remains hypothesis-generating and requires experimental
 validation.
 
@@ -284,18 +283,11 @@ Citations that motivated this dashboard, as supplied by the author:
    https://doi.org/10.31344/ijhhs.v5i2.256
 2. Widjaja, A., Wibowo, S., & Parikesit, A. A. (2025). THE COMPARISON BETWEEN LOGISTIC REGRESSION AND
    CONVOLUTIONAL NEURAL NETWORK FOR MULTI-DRUG RESISTANT TUBERCULOSIS PREDICTION. *Jurnal
-   Bioteknologi Dan Biosains Indonesia*, *12*(1), 31–44. https://doi.org/10.11594/jbbi.12.1
+   Bioteknologi Dan Biosains Indonesia*, *12*(1), 31–44. https://doi.org/10.55981/jbbi.2025.9769
 3. Valeska, M. D., Adisurja, G. P., Bernard, S., Wijaya, R., Aldino, M., & Parikesit, A. A. (2019).
    The Role of Bioinformatics in Personalized Medicine: Your Future Medical Treatment. *Cermin Dunia
    Kedokteran*, *46*(12), 785–788. https://doi.org/10.5281/zenodo.4460835
 
-**Note on identifier resolution**, checked 25 September 2026. Reference 1 resolves in Crossref, which
-returns the page range 177-184. Reference 2's DOI as printed above does not resolve: `10.11594` is the
-journal's former registrant prefix and `jbbi.12.1` addresses the issue rather than the article. The
-article itself is registered at `10.55981/jbbi.2025.9769`, and Crossref confirms the same title,
-volume 12, issue 1 and pages 31-44. Reference 3 resolves through Zenodo and DataCite rather than
-Crossref, which is expected for a Zenodo deposit; the record's metadata matches the citation, with
-publication date 29 November 2019.
-
-Methodological sources for the equations implemented here are cited in the module docstrings of
-`algos.py` and `ncbi.py`, and in full in the proceeding itself.
+## Note
+- Paper will be posted in this repository as soon as it is published
+- Methodological sources for the equations implemented here are cited in the module docstrings of `algos.py` and `ncbi.py`, and in full in the proceeding itself.

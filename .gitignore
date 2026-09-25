@@ -28,6 +28,7 @@ graphify-out/
 
 # Agent and planning artifacts, plus binary manuscripts: local only, never pushed.
 MEMORY.md
+ERRORS.md
 plan*.md
 CLAUDE.md
 AGENTS.md

@@ -1,0 +1,16 @@
+{
+  "PropertyTable": {
+    "Properties": [
+      {
+        "CID": 6480466,
+        "MolecularWeight": "534.5",
+        "ConnectivitySMILES": "CC1(CN2C=C(N=C2O1)[N+](=O)[O-])COC3=CC=C(C=C3)N4CCC(CC4)OC5=CC=C(C=C5)OC(F)(F)F",
+        "XLogP": 5.6,
+        "TPSA": 104,
+        "HBondDonorCount": 0,
+        "HBondAcceptorCount": 11,
+        "RotatableBondCount": 7
+      }
+    ]
+  }
+}

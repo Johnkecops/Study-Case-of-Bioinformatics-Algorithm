@@ -55,8 +55,8 @@ Engineering Sciences**, https://ices.kongrepark.org/ .
 Suggested citation for the proceeding:
 
 > Parikesit, A. A. (2026). Algorithmic perspectives in bioinformatics: A review of computational
-> methods interpreting emerging trends in biotechnology. _Status: Accepted_. In *Proceedings of the III. International
-> Conference on Engineering Sciences (ICES)*. https://ices.kongrepark.org/
+> methods interpreting emerging trends in biotechnology. _Status: Published_. In *Proceedings of the III. International
+> Conference on Engineering Sciences (ICES)*. [https://ices.kongrepark.org/](https://ices.kongrepark.org/library)
 
 Author: Dr.rer.nat. Arli Aditya Parikesit, Department of Biotechnology, School of Health and Life
 Sciences, i3L University, Jakarta, Indonesia. ORCID

@@ -43,9 +43,17 @@ for _i, _b in enumerate(b"ACGT"):
     _BASE_CODE[_b] = _i
 
 
+_COMPLEMENT = str.maketrans("ACGTacgtNn", "TGCAtgcaNn")
+
+
 def encode(seq):
     """Sequence to a uint8 array of ASCII codes."""
     return np.frombuffer(seq.encode("ascii"), dtype=np.uint8)
+
+
+def revcomp(seq):
+    """Reverse complement. Cas9 cuts at NGG on either strand, so every scan needs both."""
+    return seq.translate(_COMPLEMENT)[::-1]
 
 
 def mismatch_count(guide, site):
@@ -89,7 +97,7 @@ def pam_spacers(seq, pam="GG"):
     Returns (start_indices, spacer_matrix) where spacer_matrix[i] is the 20-nt spacer as base codes
     0-3, and any window containing a non-ACGT character is dropped.
     """
-    codes = _BASE_CODE[encode(seq)]
+    codes = _BASE_CODE[encode(seq.upper())]   # soft-masked input would otherwise yield no sites
     n = len(codes) - 22
     if n <= 0:
         return np.empty(0, dtype=int), np.empty((0, 20), dtype=np.int8)
@@ -128,7 +136,11 @@ def design_guides(target, genome, weights=CFD_WEIGHTS_ILLUSTRATIVE, max_mismatch
     t_starts, t_spacers = pam_spacers(target)
     if limit:
         t_starts, t_spacers = t_starts[:limit], t_spacers[:limit]
-    _, g_sites = pam_spacers(genome)
+    # Both strands: a minus-strand NGG site reads as CCN on the plus strand and is invisible to a
+    # forward-only scan, which would leave roughly half the off-target load out of Equation 3.
+    _, g_fwd = pam_spacers(genome)
+    _, g_rev = pam_spacers(revcomp(genome))
+    g_sites = np.vstack([g_fwd, g_rev])
     w = np.asarray(weights, dtype=float)
     out = []
     for start, spacer in zip(t_starts, t_spacers):
@@ -160,7 +172,8 @@ def delta_g(pkd, temperature=T_PHYS):
     Kd = 10^-pKd, and dG = R T ln(Kd), which is negative for any pKd above 0. One log unit of pKd is
     worth R T ln(10), about 5.9 kJ/mol at 37 C.
     """
-    return R_GAS * temperature * np.log(10.0 ** (-float(pkd)))
+    # ln(10^-p) is -p ln(10) exactly; forming 10^-p first underflows to 0.0 above pKd ~309.
+    return -R_GAS * temperature * float(pkd) * np.log(10.0)
 
 
 def log_unit_kj(temperature=T_PHYS):
@@ -183,7 +196,8 @@ def lipinski(row):
     for name, value, test in rules:
         if value is None:
             failed.append(f"{name.split()[0]} missing")
-        elif test(value):
+        # PubChem returns some descriptors as JSON strings; coerce as penalty() already does.
+        elif test(float(value)):
             failed.append(name)
     return sum(1 for f in failed if "missing" not in f), failed
 
@@ -234,6 +248,8 @@ def screen(rows, lam=1.0, affinity=None, k=None):
         name = row["name"]
         a = affinity.get(name)
         pen = penalty(row)
+        if np.isnan(pen):
+            continue  # no recognised descriptor: NaN sorts unordered and would rank first
         viol, failed = lipinski(row)
         out.append(dict(
             row,

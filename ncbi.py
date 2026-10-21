@@ -14,6 +14,7 @@ References:
       https://doi.org/10.1093/nar/gkac956
 """
 
+import hashlib
 import json
 import os
 import re
@@ -21,6 +22,8 @@ import time
 from pathlib import Path
 
 import requests
+
+from algos import revcomp
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 PUGREST = "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
@@ -50,6 +53,7 @@ TB_GENES = {
     },
 }
 H37RV = "NC_000962.3"
+H37RV_LENGTH = 4_411_532   # slen of the record, same esummary call
 
 # Verified by esummary on db=nuccore, 25 September 2026; lengths in the comments are the returned slen.
 PHAGE_TRAIN = {
@@ -67,10 +71,15 @@ COMPOUNDS = [
     "ciprofloxacin", "moxifloxacin", "linezolid", "delamanid", "clofazimine",
     "streptomycin", "amikacin",
 ]
+# ConnectivitySMILES, not CanonicalSMILES: PUG-REST renamed the property and returns the new key, so
+# asking for the old name silently yields a record without the field requested.
 PROPERTIES = [
     "MolecularWeight", "XLogP", "HBondDonorCount", "HBondAcceptorCount",
-    "TPSA", "RotatableBondCount", "CanonicalSMILES",
+    "TPSA", "RotatableBondCount", "ConnectivitySMILES",
 ]
+# The cache key carries the property set: changing PROPERTIES must not serve a payload fetched for a
+# different one, which would drop the new descriptor with no error anywhere.
+_PROP_TAG = hashlib.sha256(",".join(PROPERTIES).encode()).hexdigest()[:8]
 
 _last_call = [0.0]
 
@@ -92,19 +101,22 @@ def _identify(params):
     return params
 
 
-def _cached(name, fetch):
-    """Return cached text for `name`, calling `fetch()` once on a miss.
+def _cached(name, fetch, parse):
+    """Return the parsed cached record for `name`, calling `fetch()` once on a miss.
 
     The cache is what lets the dashboard open without network access, and what keeps a demonstration
-    from re-querying NCBI on every Streamlit rerun.
+    from re-querying NCBI on every Streamlit rerun. `parse` runs before the write, so a malformed
+    200 response (a truncated body, an HTML error page) raises and is never committed to disk; a
+    cached file that cannot be parsed would otherwise be permanent.
     """
     path = CACHE / name
     if path.exists():
-        return path.read_text()
+        return parse(path.read_text())
     text = fetch()
+    parsed = parse(text)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text)
-    return text
+    return parsed
 
 
 def _get(url, params):
@@ -114,14 +126,7 @@ def _get(url, params):
     return r.text
 
 
-def fasta(accession, start=None, stop=None):
-    """Fetch one nuccore record, or a 1-based inclusive slice of it, as (header, uppercase sequence)."""
-    span = f"_{start}_{stop}" if start else ""
-    params = {"db": "nuccore", "id": accession, "rettype": "fasta", "retmode": "text"}
-    if start:
-        params |= {"seq_start": start, "seq_stop": stop}
-    text = _cached(f"nuccore_{accession}{span}.fasta",
-                   lambda: _get(f"{EUTILS}/efetch.fcgi", params))
+def _parse_fasta(text, accession):
     lines = text.strip().splitlines()
     if not lines or not lines[0].startswith(">"):
         raise ValueError(f"{accession}: efetch did not return FASTA")
@@ -129,6 +134,17 @@ def fasta(accession, start=None, stop=None):
     if not seq:
         raise ValueError(f"{accession}: FASTA record carried no sequence")
     return lines[0][1:], seq
+
+
+def fasta(accession, start=None, stop=None):
+    """Fetch one nuccore record, or a 1-based inclusive slice of it, as (header, uppercase sequence)."""
+    span = f"_{start}_{stop}" if start else ""
+    params = {"db": "nuccore", "id": accession, "rettype": "fasta", "retmode": "text"}
+    if start:
+        params |= {"seq_start": start, "seq_stop": stop}
+    return _cached(f"nuccore_{accession}{span}.fasta",
+                   lambda: _get(f"{EUTILS}/efetch.fcgi", params),
+                   lambda t: _parse_fasta(t, accession))
 
 
 def gene_window(label, flank=100_000):
@@ -140,9 +156,11 @@ def gene_window(label, flank=100_000):
     """
     g = TB_GENES[label]
     start = max(1, g["start"] - flank)
-    stop = g["stop"] + flank
+    stop = min(H37RV_LENGTH, g["stop"] + flank)
     header, seq = fasta(H37RV, start, stop)
     gene = seq[g["start"] - start:g["stop"] - start + 1]
+    if g["strand"] == "-":
+        gene = revcomp(gene)   # the slice is the plus strand; the gene reads the other way
     return {
         "header": header, "window": seq, "gene": gene, "window_start": start,
         "window_stop": stop, "gene_start": g["start"], "gene_stop": g["stop"],
@@ -157,8 +175,8 @@ def compound_properties(names=None):
     for name in names:
         url = f"{PUGREST}/compound/name/{name}/property/{','.join(PROPERTIES)}/JSON"
         try:
-            text = _cached(f"pubchem_{name}.json", lambda u=url: _get(u, {}))
-            rec = json.loads(text)["PropertyTable"]["Properties"][0]
+            rec = _cached(f"pubchem_{name}_{_PROP_TAG}.json", lambda u=url: _get(u, {}),
+                          lambda t: json.loads(t)["PropertyTable"]["Properties"][0])
         except (requests.HTTPError, KeyError, IndexError, ValueError) as exc:
             # A missing compound must not take the panel down; it is reported as missing instead.
             rows.append({"name": name, "error": str(exc)[:120]})

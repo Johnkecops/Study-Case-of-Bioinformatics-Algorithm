@@ -189,7 +189,11 @@ with tab1:
         height=180,
     )
 
+    # The flag, not the button return value: a button is True for one rerun only, so moving a slider
+    # below would otherwise blank the results instead of recomputing them.
     if st.button("Run Box 1 on this gene", type="primary"):
+        st.session_state["run_box1"] = True
+    if st.session_state.get("run_box1"):
         with st.spinner("Scanning the window for off-target sites…"):
             guides = algos.design_guides(w["gene"], w["window"], max_mismatch=max_mm, limit=n_guides)
         if not guides:
@@ -274,31 +278,37 @@ with tab2:
     if missing:
         st.warning(f"PubChem did not return descriptors for: {', '.join(missing)}")
     ranked = algos.screen(rows, lam=lam)
-    df = pd.DataFrame([{
-        "Compound": r["name"], "CID": r.get("CID"),
-        "MW": r.get("MolecularWeight"), "XLogP": r.get("XLogP"),
-        "HBD": r.get("HBondDonorCount"), "HBA": r.get("HBondAcceptorCount"),
-        "TPSA": r.get("TPSA"), "RotB": r.get("RotatableBondCount"),
-        "Ro5 violations": r["lipinski_violations"], "Failed rules": r["lipinski_failed"],
-        "penalty(m)": r["penalty"],
-        "Affinity (Eq. 4)": "not modelled",
-        "score = a − λ·penalty": r["score"],
-    } for r in ranked])
-    st.dataframe(
-        df, hide_index=True, width="stretch",
-        column_config={
-            "penalty(m)": st.column_config.NumberColumn(format="%.4f"),
-            "score = a − λ·penalty": st.column_config.NumberColumn(format="%.4f"),
-            "MW": st.column_config.NumberColumn(format="%.2f"),
-        },
-    )
-    st.caption(
-        "Descriptors are PubChem's curated values, fetched by compound name; CID links every row to a "
-        "real source record. Ro5 thresholds follow Lipinski et al. (2001); `penalty(m)` is a "
-        "transparent mean-squared-distance-outside-range term, not the QED score, which would need a "
-        "cheminformatics toolkit this app deliberately does not depend on."
-    )
-    st.bar_chart(df.set_index("Compound")[["penalty(m)"]], height=240)
+    if not ranked:
+        # Every compound errored or carried no recognised descriptor: an empty frame has no
+        # "Compound" column, and indexing it below would take the panel down.
+        st.error("No compound carried usable descriptors, so Equation 6 has nothing to rank. "
+                 "Run `python ncbi.py` with network access to populate the cache.")
+    else:
+        df = pd.DataFrame([{
+            "Compound": r["name"], "CID": r.get("CID"),
+            "MW": r.get("MolecularWeight"), "XLogP": r.get("XLogP"),
+            "HBD": r.get("HBondDonorCount"), "HBA": r.get("HBondAcceptorCount"),
+            "TPSA": r.get("TPSA"), "RotB": r.get("RotatableBondCount"),
+            "Ro5 violations": r["lipinski_violations"], "Failed rules": r["lipinski_failed"],
+            "penalty(m)": r["penalty"],
+            "Affinity (Eq. 4)": "not modelled",
+            "score = a − λ·penalty": r["score"],
+        } for r in ranked])
+        st.dataframe(
+            df, hide_index=True, width="stretch",
+            column_config={
+                "penalty(m)": st.column_config.NumberColumn(format="%.4f"),
+                "score = a − λ·penalty": st.column_config.NumberColumn(format="%.4f"),
+                "MW": st.column_config.NumberColumn(format="%.2f"),
+            },
+        )
+        st.caption(
+            "Descriptors are PubChem's curated values, fetched by compound name; CID links every row "
+            "to a real source record. Ro5 thresholds follow Lipinski et al. (2001); `penalty(m)` is a "
+            "transparent mean-squared-distance-outside-range term, not the QED score, which would "
+            "need a cheminformatics toolkit this app deliberately does not depend on."
+        )
+        st.bar_chart(df.set_index("Compound")[["penalty(m)"]], height=240)
 
     with st.expander("Box 2: Constrained generative screening loop (verbatim)"):
         st.code("""discover(target, N, k, lambda_):
@@ -416,6 +426,8 @@ with tab3:
         n_sample = st.slider("Sample length (bp)", 200, 5000, 1000, step=100)
         seed = st.number_input("Random seed", value=0, step=1)
     if st.button("Draw a candidate sequence", type="primary"):
+        st.session_state["draw_sample"] = True
+    if st.session_state.get("draw_sample"):
         seed_seq = train["Mycobacterium phage D29"]
         sampled = model.sample(n_sample, seed_seq=seed_seq, rng=np.random.default_rng(int(seed)))
         d = algos.design_score(sampled, host, model, beta)

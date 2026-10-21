@@ -190,6 +190,55 @@ def test_eq9_and_sampling():
     assert model.log_likelihood(sampled)[1] > model.log_likelihood(uniform)[1]
 
 
+def test_regressions():
+    """One assert per bug fixed in the October 2026 review; each fails if the fix is reverted."""
+    # pam_spacers must not silently drop soft-masked (lowercase) sequence
+    assert len(algos.pam_spacers("a" * 21 + "gg")[0]) == len(algos.pam_spacers("A" * 21 + "GG")[0]) == 1
+
+    # revcomp round-trips, and a minus-strand NGG site is counted as an off-target
+    seq = "ACGTTGCANNACGT"
+    assert algos.revcomp(algos.revcomp(seq)) == seq
+    guide = "A" * 20
+    plus_only = guide + "TGG"
+    # the same site on the minus strand reads as CCA + 20 T on the plus strand
+    minus_only = algos.revcomp(guide + "TGG")
+    both = algos.design_guides(plus_only, plus_only + "TTTT" + minus_only, max_mismatch=4)
+    assert both[0]["n_offtargets"] == 0 and both[0]["exact_sites"] == 2, both[0]
+
+    # delta_g stays finite and linear well past the point 10**-pkd underflows
+    assert np.isfinite(algos.delta_g(400))
+    assert abs(algos.delta_g(400) - 400 * algos.delta_g(1)) < 1e-9
+
+    # lipinski accepts the JSON strings PubChem returns for some descriptors
+    assert algos.lipinski({"MolecularWeight": "600", "XLogP": 1, "HBondDonorCount": 1,
+                           "HBondAcceptorCount": 1})[0] == 1
+
+    # a row with no recognised descriptor is dropped, not ranked first on a NaN score
+    good = {"name": "good", "MolecularWeight": 350.0, "XLogP": 2.5, "HBondDonorCount": 2,
+            "HBondAcceptorCount": 5, "TPSA": 75.0, "RotatableBondCount": 5}
+    ranked = algos.screen([{"name": "blank"}, good])
+    assert [r["name"] for r in ranked] == ["good"], ranked
+
+    # the gene of a minus-strand target is returned in its own reading direction
+    katg = ncbi.gene_window("katG (Rv1908c) - isoniazid, catalase-peroxidase")
+    plus_slice = katg["window"][katg["gene_start"] - katg["window_start"]:
+                                katg["gene_stop"] - katg["window_start"] + 1]
+    assert katg["strand"] == "-" and katg["gene"] == algos.revcomp(plus_slice)
+
+    # a malformed response is never committed to the cache
+    import tempfile
+    old, ncbi.CACHE = ncbi.CACHE, Path(tempfile.mkdtemp())
+    try:
+        try:
+            ncbi._cached("bad.fasta", lambda: "<html>error</html>",
+                         lambda t: ncbi._parse_fasta(t, "X"))
+        except ValueError:
+            pass
+        assert not (ncbi.CACHE / "bad.fasta").exists()
+    finally:
+        ncbi.CACHE = old
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
